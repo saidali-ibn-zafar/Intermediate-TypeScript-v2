@@ -39,3 +39,36 @@ if (isString(variable)) {
   console.log("Variable is not a string.");
 }
 ```
+
+---
+
+# Object and {}
+
+- `object`: Represents all non-primitive types, including objects, arrays, functions, and more, but it excludes null and undefined.
+
+- `{} (Empty Object Type)`: Specifically represents an empty object, but it also excludes null and undefined.
+
+---
+
+```ts
+let withOutUndefined: {} | null = 37;
+let withUndefined: {} | null | undefined = 43;
+let anUnknown: unknown = "32";
+
+withOutUndefined = anUnknown; // unknown is not assignable to {}
+withUndefined = anUnknown; // OK
+```
+
+---
+
+## Removing `null` and `undefined`
+
+```ts
+type NullableStringOrNumber = string | number | null | undefined;
+
+typeStringOrNumber = NullableStringOrNumber & {}; // removes null and undefined
+
+type foo = NonNullavle;
+
+// type NonNullable<T> = T & {};
+```
