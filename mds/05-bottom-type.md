@@ -22,13 +22,13 @@
 
  let myVehicle: Vehicle = obtainRandomVehicle()
 
-  The exhaustive conditional
+  // The exhaustive conditional
  if (myVehicle instanceof Truck) {
    myVehicle.tow()  Truck
  } else if (myVehicle instanceof Car) {
    myVehicle.drive()  Car
  } else {
-    NEITHER!
+   // NEITHER!
    const neverValue: never = myVehicle
  }
 
