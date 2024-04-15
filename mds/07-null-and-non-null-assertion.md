@@ -35,3 +35,11 @@ let toyBox: { toy?: string } = { toy: "Race car" };
 // I'm sure the toy is there, I can play with it!
 let myToy = toyBox.toy!;
 ```
+
+- - - - -
+
+- When we are very very sure then we can use `!` in our code, yeah of course you can say what does `!` mean? Take a look at the code below:
+
+![image](https://github.com/saidali-ibn-zafar/Intermediate-TypeScript-v2/assets/120341849/a84cabd6-de6c-4ca4-8ab9-f6a3f9551faf)
+
+In the code `isSetup` is boolean but if something happens wrong then it would be `undefined`, however we are sure that it can be `boolean`, so we are using `!` to get rid of errors while we are working...
